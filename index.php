@@ -14,7 +14,7 @@ echo "Created message with ID " . $message->getId() . "\n";
 
 // Get all messages
 $messages = $entityManager->getRepository('Message')->findAll();
-
+dd($messages);
 echo "Listing all messages:\n";
 foreach($messages as $message)
     echo sprintf("- %s\n", $message->getText());
