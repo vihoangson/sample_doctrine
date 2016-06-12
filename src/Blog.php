@@ -11,6 +11,9 @@ class Blog
     /** @Column(type="string") **/
     protected $text;
 
+    /** @Column(type="string") **/
+    public $content22=null;
+
     public function getId()
     {
         return $this->id;

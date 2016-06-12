@@ -19,7 +19,14 @@ class ClassName
 
 	function show(){
 		require_once "bootstrap.php";
-		dd($entityManager->getRepository('Blog')->findAll());
+		$blogs = $entityManager->getRepository('Blog')->findAll();
+		foreach ($blogs as $key => $value) {
+			$value->content22="3121";
+		}
+		$entityManager->persist($blogs);
+		$entityManager->flush();
+				
+		dd();
 	}
 
 	
